@@ -1,4 +1,5 @@
 # terraform-module-azurerm-resource-group
+Terraform module that can be used to create an Azure Resource Group.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
@@ -18,3 +19,14 @@
 | name |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Inspec
+This module ships some inspec tests. You can depend on this repository for the inspec tests and load the profile.
+
+The only attribute you'll have to set is the following:
+```yaml
+attributes:
+  azurerm:
+    resource_group:
+      - name_prefix: 'inspec' # Replace this value in your inspec profile
+```
