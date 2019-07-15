@@ -1,0 +1,17 @@
+name: azurerm-resource-group-example-default
+title: AzureRM Resource Group - Default Example
+maintainer: FXinnovation, Inc.
+copyright: FXinnovaion, Inc.
+copyright_email: cloudsquad@fxinnovation.com
+license: MIT
+summary: Inspec for azurerm-aks default example
+version: 0.1.0
+depends:
+  - name: azurerm-resource-group
+    path: ../../
+supports:
+  - platform: azure
+attributes:
+  azurerm:
+    resource_group:
+      - name_prefix: 'inspecarmrg
