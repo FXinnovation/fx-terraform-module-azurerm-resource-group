@@ -14,5 +14,5 @@ supports:
 attributes:
   - azurerm:
       resource_group:
-        - name_prefix: 'CHANGEME'
-        - location: 'CHANGEME'
+        name_prefix: 'CHANGEME'
+        location: 'CHANGEME'
