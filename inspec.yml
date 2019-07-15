@@ -12,6 +12,7 @@ depends:
 supports:
   - platform: azure
 attributes:
-  azurerm:
-    resource_group:
-      - name_prefix: 'inspec' # Replace this value in your inspec profile
+  - azurerm:
+      resource_group:
+        - name_prefix: 'CHANGEME'
+        - location: 'CHANGEME'
