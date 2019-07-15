@@ -23,7 +23,7 @@ control 'resource_group' do
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azurerm_resource_groups.where ( name.start_with?(name_prefix) ) do
+  describe azurerm_resource_groups.where { name.start_with?(name_prefix) } do
     it                   { should exist }
     it                   { should have_tags }
     its('tag')           { should include 'Terraform' }
