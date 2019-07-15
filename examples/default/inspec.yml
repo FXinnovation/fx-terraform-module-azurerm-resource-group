@@ -14,4 +14,4 @@ supports:
 attributes:
   azurerm:
     resource_group:
-      - name_prefix: 'inspecarmrg
+      - name_prefix: 'inspecarmrg'
