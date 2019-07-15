@@ -9,13 +9,8 @@
 ###
 # Attributes handling
 ###
-azurerm        = attribute('azurerm')
-puts azurerm
-resource_group = azurerm['resource_group']
-location       = resource_group['location']
-name_prefix    = resource_group['name_prefix']
-puts "Location: #{location}"
-puts "Name Prefix: #{name_prefix}"
+location    = attribute('azurerm_resource_group_name_prefix')
+name_prefix = attribute('azurerm_resource_group_location')
 
 ###
 # Controls

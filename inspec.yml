@@ -12,7 +12,7 @@ depends:
 supports:
   - platform: azure
 attributes:
-  - azurerm:
-      resource_group:
-        name_prefix: 'CHANGEME'
-        location: 'CHANGEME'
+  - name: azurerm_resource_group_name_prefix
+    default: 'CHANGE ME'
+  - name: azurerm_resource_group_location
+    default: 'CHANGE_ME'
