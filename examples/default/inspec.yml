@@ -12,9 +12,9 @@ depends:
 supports:
   - platform: azure
 attributes:
-  - name: azurerm_resource_group_name_prefix
+  - name: name_prefix
     value: 'inspecarmrg'
-    profile: child
-  - name: azurerm_resource_group_location
+    profile: azurerm-resource-group
+  - name: location
     value: 'canadacentral'
-    profile: child
+    profile: azurerm-resource-group
