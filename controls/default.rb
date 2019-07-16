@@ -9,8 +9,8 @@
 ###
 # Attributes handling
 ###
-location    = attribute('name_prefix')
-name_prefix = attribute('location')
+name_prefix  = attribute('name_prefix')
+location     = attribute('location')
 
 ###
 # Controls
