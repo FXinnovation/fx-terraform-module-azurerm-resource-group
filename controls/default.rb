@@ -26,6 +26,5 @@ control 'resource_group' do
     it                   { should have_tags }
     its('tag')           { should include 'Terraform' }
     its('Terraform_tag') { should match 'true' }
-
   end
 end
