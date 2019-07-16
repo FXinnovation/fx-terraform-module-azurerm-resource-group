@@ -11,6 +11,7 @@
 ###
 name_prefix  = attribute('name_prefix')
 location     = attribute('location')
+enabled      = attribute('enabled')
 
 ###
 # Controls
@@ -22,6 +23,10 @@ control 'resource_group' do
   tag    'resource_group'
 
   describe azurerm_resource_groups.where { name.start_with?(name_prefix) } do
-    it                   { should exist }
-  end
+    it { should exist }
+  end if enabled
+
+  describe azurerm_resource_groups.where { name.start_with?(name_prefix) } do
+    it { should_not exist }
+  end unless enabled
 end

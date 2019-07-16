@@ -16,3 +16,5 @@ attributes:
     value: 'CHANGE ME'
   - name: location
     value: 'CHANGE_ME'
+  - name: enabled
+    value: true

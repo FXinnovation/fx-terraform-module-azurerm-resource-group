@@ -24,7 +24,8 @@ Terraform module that can be used to create an Azure Resource Group.
 This module ships some inspec tests. You can depend on this repository for the inspec tests and load the profile.
 
 ### Attributes
-| Name | Description |
-| ---- | ----------- |
-| name_prefix | Name prefix of the resource group |
-| location | Location of the resource group |
+| Name | Description | Default |
+| ---- | ----------- | ------- |
+| name_prefix | Name prefix of the resource group | `CHANGE_ME` |
+| location | Location of the resource group | `CHANGE_ME` |
+| enabled | Wheter the resource group module is enabled or not | `true` |

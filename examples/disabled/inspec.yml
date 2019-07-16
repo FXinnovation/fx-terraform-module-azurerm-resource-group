@@ -1,0 +1,23 @@
+name: azurerm-resource-group-example-disabled
+title: AzureRM Resource Group - Disabled Example
+maintainer: FXinnovation, Inc.
+copyright: FXinnovaion, Inc.
+copyright_email: cloudsquad@fxinnovation.com
+license: MIT
+summary: Inspec for azurerm-aks disabled example
+version: 0.1.0
+depends:
+  - name: azurerm-resource-group
+    path: ../../
+supports:
+  - platform: azure
+attributes:
+  - name: name_prefix
+    value: 'inspecarmrg'
+    profile: azurerm-resource-group
+  - name: location
+    value: 'canadacentral'
+    profile: azurerm-resource-group
+  - name: enabled
+    value: false
+    profile: azurerm-resource-group
