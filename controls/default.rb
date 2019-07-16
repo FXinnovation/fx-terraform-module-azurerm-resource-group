@@ -9,8 +9,8 @@
 ###
 # Attributes handling
 ###
-location    = attribute('azurerm_resource_group_name_prefix')
-name_prefix = attribute('azurerm_resource_group_location')
+location    = attribute('name_prefix')
+name_prefix = attribute('location')
 
 ###
 # Controls
