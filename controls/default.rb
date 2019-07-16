@@ -21,9 +21,10 @@ control 'resource_group' do
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azurerm_resource_groups.where { name.start_with?(name_prefix) } do
+  describe azure_resource_group.where { name.start_with?(name_prefix) } do
     it                   { should exist }
     it                   { should have_tags }
+    its('location')      { should cmp location }
     its('tag')           { should include 'Terraform' }
     its('Terraform_tag') { should match 'true' }
   end
