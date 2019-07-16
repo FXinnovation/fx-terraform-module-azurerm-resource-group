@@ -21,7 +21,8 @@ control 'resource_group' do
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azure_resource_group.where { name.start_with?(name_prefix) } do
+  describe azurerm_resource_group.where { name.start_with?(name_prefix) } do
+    puts it
     it                   { should exist }
     it                   { should have_tags }
     its('location')      { should cmp location }
