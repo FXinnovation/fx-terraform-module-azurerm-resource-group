@@ -13,6 +13,8 @@ supports:
   - platform: azure
 attributes:
   - name: azurerm_resource_group_name_prefix
-    default: 'inspecarmrg'
+    value: 'inspecarmrg'
+    profile: child
   - name: azurerm_resource_group_location
-    default: 'canadacentral'
+    value: 'canadacentral'
+    profile: child

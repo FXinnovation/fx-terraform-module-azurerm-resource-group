@@ -13,6 +13,6 @@ supports:
   - platform: azure
 attributes:
   - name: azurerm_resource_group_name_prefix
-    default: 'CHANGE ME'
+    value: 'CHANGE ME'
   - name: azurerm_resource_group_location
-    default: 'CHANGE_ME'
+    value: 'CHANGE_ME'
