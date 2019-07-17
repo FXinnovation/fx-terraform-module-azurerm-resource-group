@@ -1,6 +1,6 @@
 #
-# inspec_profile::azurerm-aks
-# controls::resource_groups
+# inspec_profile::azurerm-resource-group
+# controls::default
 #
 # author:cloudsquad@fxinnovation.com
 # description: Controls for resource groups in Azure
