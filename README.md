@@ -23,15 +23,9 @@ Terraform module that can be used to create an Azure Resource Group.
 ## Inspec
 This module ships some inspec tests. You can depend on this repository for the inspec tests and load the profile.
 
-The only attributes you'll have to set are the following:
-```yaml
-attributes:
-  - name: name_prefix
-    value: <VALUE>
-    child: azurerm-resource-group
-  - name: location
-    value: <VALUE>
-    child: azurerm-resource-group
-```
+### Attributes
 
-or by using an attribute file.
+| Name | Description |
+| ---- | ----------- |
+| name_prefix | Prefix of the name that will be used to lookup your resource group |
+| location | Location in which your resource group resides |
