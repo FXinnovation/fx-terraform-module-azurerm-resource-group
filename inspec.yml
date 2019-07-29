@@ -4,7 +4,7 @@ maintainer: FXinnovation, Inc.
 copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
-summary: Inspec for azurerm resource_group terraform module
+summary: Inspec for azurerm-resource-group terraform module
 version: 0.2.0
 depends:
   inspec-azure:

@@ -4,7 +4,7 @@ maintainer: FXinnovation, Inc.
 copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
-summary: Inspec for azurerm-aks disabled example
+summary: Inspec for azurerm-resource-group disabled example
 version: 0.2.0
 depends:
   - name: azurerm-resource-group
