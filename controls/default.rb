@@ -7,13 +7,6 @@
 #
 
 ###
-# Attributes handling
-###
-name_prefix  = input('name_prefix')
-location     = input('location')
-enabled      = input('enabled')
-
-###
 # Controls
 ###
 control 'resource_group' do
@@ -22,11 +15,14 @@ control 'resource_group' do
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azurerm_resource_groups.where { name.start_with?(name_prefix) } do
-    it { should exist }
-  end if enabled
+  describe azurerm_resource_groups.where { name.start_with?(input('name_prefix')) } do
+    it              { should exist }
+    it              { should have_tags }
+    its('location') { should cmp input('location') }
+    its('tags')     { should include 'Terraform' }
+  end if input('enabled')
 
-  describe azurerm_resource_groups.where { name.start_with?(name_prefix) } do
+  describe azurerm_resource_groups.where { name.start_with?(input('name_prefix')) } do
     it { should_not exist }
-  end unless enabled
+  end unless input('enabled')
 end
