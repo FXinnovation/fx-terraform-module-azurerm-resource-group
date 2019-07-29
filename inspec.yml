@@ -14,9 +14,7 @@ supports:
 inputs:
   - name: name
     description: Name prefix of the resource group.
-    required: true
     profile: azurerm-resource-group
   - name: enabled
     description: Whether or not the resource group module is enabled.
-    required: true
     profile: azurerm-resource-group
