@@ -17,11 +17,6 @@ control 'resource_group' do
 
   describe azurerm_resource_groups.where(name: input('name')) do
     it                        { should exist }
-    it                        { should have_tags }
-    its('location')           { should cmp input('location') }
-    its('provisioning_state') { should cmp 'Succeeded' }
-    its('tags')               { should include 'Terraform' }
-    its('Terraform_tag')      { should cmp 'true' }
   end if input('enabled')
 
   describe azurerm_resource_groups.where(name: input('name')) do
