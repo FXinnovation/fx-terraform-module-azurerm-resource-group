@@ -12,7 +12,7 @@ depends:
 supports:
   - platform: azure
 inputs:
-  - name: name_prefix
+  - name: name
     description: Name prefix of the resource group.
     required: true
     profile: azurerm-resource-group

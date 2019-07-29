@@ -13,7 +13,7 @@ supports:
   - platform: azure
 inputs:
   - name: name_prefix
-    value: 'inspecarmrg'
+    value: 'tftest-rg'
     profile: azurerm-resource-group
   - name: location
     value: 'canadacentral'
