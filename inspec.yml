@@ -7,8 +7,8 @@ license: MIT
 summary: Inspec for azurerm-resource-group terraform module
 version: 0.2.0
 depends:
-  inspec-azure:
-    git: https://github.com/inspec/inspec-azure.git
+  - name: inspec-azure
+    url: https://github.com/inspec/inspec-azure/archive/v1.3.0.tar.gz
 supports:
   - platform: azure
 inputs:
