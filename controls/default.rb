@@ -11,15 +11,22 @@
 ###
 control 'resource_group' do
   impact 1.0
-  title  'Check the azure resource group'
+  title  'Checks the azure resource group'
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azure_resource_group(name: input('name')) do
-    it              { should exist }
-    it              { should have_tags }
-    its('location') { should cmp input('location') }
-    its('tags')     { should include 'Terraform' }
+  name = input('name')
+  puts input('name')
+  puts "#{input('name')}"
+  puts name
+
+  describe azure_resource_group(name: "#{input('name')}") do
+    it                        { should exist }
+    it                        { should have_tags }
+    its('location')           { should cmp input('location') }
+    its('provisioning_state') { should cmp 'Succeeded' }
+    its('tags')               { should include 'Terraform' }
+    its('Terraform_tag')      { should cmp 'true' }
   end if input('enabled')
 
   describe azure_resource_group(name: input('name')) do
