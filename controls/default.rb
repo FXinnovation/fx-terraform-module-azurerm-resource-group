@@ -16,10 +16,7 @@ control 'resource_group' do
   tag    'resource_group'
 
   describe azurerm_resource_groups.where(name: input('name')) do
-    it                        { should exist }
-  end if input('enabled')
-
-  describe azurerm_resource_groups.where(name: input('name')) do
-    it { should_not exist }
-  end unless input('enabled')
+    it { should exist }     if input('enabled')
+    it { should_not exist } unless input('enabled')
+  end
 end
