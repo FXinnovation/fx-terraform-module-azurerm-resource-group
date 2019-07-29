@@ -7,13 +7,6 @@
 #
 
 ###
-# Input handling
-###
-name     = input('name')
-location = input('location')
-enabled  = input('enabled')
-
-###
 # Controls
 ###
 control 'resource_group' do
@@ -22,16 +15,16 @@ control 'resource_group' do
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azure_resource_group(name: name) do
+  describe azurerm_resource_groups.where(name: input('name')) do
     it                        { should exist }
     it                        { should have_tags }
-    its('location')           { should cmp location }
+    its('location')           { should cmp input('location') }
     its('provisioning_state') { should cmp 'Succeeded' }
     its('tags')               { should include 'Terraform' }
     its('Terraform_tag')      { should cmp 'true' }
-  end if enabled
+  end if input('enabled')
 
-  describe azure_resource_group(name: name) do
+  describe azurerm_resource_groups.where(name: input('name')) do
     it { should_not exist }
-  end unless enabled
+  end unless input('enabled')
 end
