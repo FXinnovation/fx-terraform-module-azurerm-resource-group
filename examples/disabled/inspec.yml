@@ -12,11 +12,8 @@ depends:
 supports:
   - platform: azure
 inputs:
-  - name: name_prefix
+  - name: name
     value: 'tftest-rg'
-    profile: azurerm-resource-group
-  - name: location
-    value: 'canadacentral'
     profile: azurerm-resource-group
   - name: enabled
     value: false
