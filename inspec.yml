@@ -13,8 +13,10 @@ supports:
   - platform: azure
 inputs:
   - name: name
+    required: true
     description: Name prefix of the resource group.
     profile: azurerm-resource-group
   - name: enabled
+    required: true
     description: Whether or not the resource group module is enabled.
     profile: azurerm-resource-group
