@@ -7,6 +7,13 @@
 #
 
 ###
+# Input handling
+###
+# name     = input('name')
+# location = input('location')
+# enabled  = input('enabled')
+
+###
 # Controls
 ###
 control 'resource_group' do
@@ -14,11 +21,6 @@ control 'resource_group' do
   title  'Checks the azure resource group'
   tag    'azurerm'
   tag    'resource_group'
-
-  name = input('name')
-  puts input('name')
-  puts "#{input('name')}"
-  puts name
 
   describe azure_resource_group(name: "#{input('name')}") do
     it                        { should exist }
@@ -29,7 +31,7 @@ control 'resource_group' do
     its('Terraform_tag')      { should cmp 'true' }
   end if input('enabled')
 
-  describe azure_resource_group(name: input('name')) do
+  describe azure_resource_group(name: "#{input('name')}") do
     it { should_not exist }
   end unless input('enabled')
 end

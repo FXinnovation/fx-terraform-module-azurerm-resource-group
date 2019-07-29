@@ -18,3 +18,6 @@ inputs:
   - name: location
     value: 'canadacentral'
     profile: azurerm-resource-group
+  - name: enabled
+    value: true
+    profile: azurerm-resource-group

@@ -22,5 +22,5 @@ inputs:
     profile: azurerm-resource-group
   - name: enabled
     description: Whether or not the resource group module is enabled.
-    value: true
+    required: true
     profile: azurerm-resource-group
