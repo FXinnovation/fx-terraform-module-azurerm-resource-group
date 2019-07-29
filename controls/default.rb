@@ -9,9 +9,9 @@
 ###
 # Attributes handling
 ###
-name_prefix  = attribute('name_prefix')
-location     = attribute('location')
-enabled      = attribute('enabled')
+name_prefix  = input('name_prefix')
+location     = input('location')
+enabled      = input('enabled')
 
 ###
 # Controls

@@ -5,13 +5,13 @@ copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
 summary: Inspec for azurerm-aks disabled example
-version: 0.1.0
+version: 0.2.0
 depends:
   - name: azurerm-resource-group
     path: ../../
 supports:
   - platform: azure
-attributes:
+inputs:
   - name: name_prefix
     value: 'inspecarmrg'
     profile: azurerm-resource-group

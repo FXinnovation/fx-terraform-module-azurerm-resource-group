@@ -4,14 +4,14 @@ maintainer: FXinnovation, Inc.
 copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
-summary: Inspec for azurerm-aks default example
-version: 0.1.0
+summary: Inspec for azurerm-resource-group default example
+version: 0.2.0
 depends:
   - name: azurerm-resource-group
     path: ../../
 supports:
   - platform: azure
-attributes:
+inputs:
   - name: name_prefix
     value: 'inspecarmrg'
     profile: azurerm-resource-group
