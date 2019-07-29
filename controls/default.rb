@@ -15,14 +15,14 @@ control 'resource_group' do
   tag    'azurerm'
   tag    'resource_group'
 
-  describe azurerm_resource_groups.where { name.start_with?(input('name_prefix')) } do
+  describe azure_resource_group(name: input('name')) do
     it              { should exist }
     it              { should have_tags }
     its('location') { should cmp input('location') }
     its('tags')     { should include 'Terraform' }
   end if input('enabled')
 
-  describe azurerm_resource_groups.where { name.start_with?(input('name_prefix')) } do
+  describe azure_resource_group(name: input('name')) do
     it { should_not exist }
   end unless input('enabled')
 end
