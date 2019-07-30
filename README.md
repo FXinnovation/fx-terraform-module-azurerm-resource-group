@@ -28,4 +28,4 @@ This module ships with an inspec profile. You can rely on this profile to test t
 
 ### Attributes
 
-See inspec.yaml
+See inspec.yml
