@@ -5,7 +5,7 @@ copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
 summary: Inspec for azurerm-resource-group disabled example
-version: 0.2.0
+version: 0.5.0
 depends:
   - name: azurerm-resource-group
     path: ../../
@@ -13,7 +13,7 @@ supports:
   - platform: azure
 inputs:
   - name: name
-    value: 'tftest-rg'
+    value: "tftest-rg"
     profile: azurerm-resource-group
   - name: enabled
     value: false
