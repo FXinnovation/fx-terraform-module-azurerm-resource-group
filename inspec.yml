@@ -5,10 +5,10 @@ copyright: FXinnovaion, Inc.
 copyright_email: cloudsquad@fxinnovation.com
 license: MIT
 summary: Inspec for azurerm-resource-group terraform module
-version: 0.2.0
+version: 0.5.0
 depends:
   - name: inspec-azure
-    url: https://github.com/inspec/inspec-azure/archive/v1.3.0.tar.gz
+    url: https://github.com/inspec/inspec-azure/archive/v1.10.0.tar.gz
 supports:
   - platform: azure
 inputs:
