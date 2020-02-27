@@ -22,11 +22,5 @@ output "id" {
 
 output "location" {
   description = "Location of the provisioned resource group."
-  value = element(
-    concat(
-      var.location,
-      list("")
-    ),
-    0
-  )
+  value       = var.location
 }
